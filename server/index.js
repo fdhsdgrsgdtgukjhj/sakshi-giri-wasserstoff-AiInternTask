@@ -35,9 +35,8 @@ app.use(helmet({
 }));
 
 // Configure CORS
-
 app.use(cors({
-  origin: '*' ,
+  origin: ['http://localhost:5173', process.env.VITE_API_URL || 'http://localhost:3000'],
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'X-Persona'],
 }));
