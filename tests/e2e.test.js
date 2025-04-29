@@ -4,7 +4,7 @@
 import fetch from 'node-fetch';
 import assert from 'assert';
 
-const API_URL = 'http://localhost:3000';
+const API_URL = process.env.REACT_APP_API_URL
 
 async function runTest() {
   console.log('Running end-to-end test for duplicate guess detection...');
